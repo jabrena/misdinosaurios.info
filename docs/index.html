@@ -17,13 +17,23 @@
     <link href="css/index.css" rel="stylesheet">
     <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
     <script type="text/javascript">
+
+        function upgradeDino() {
+            console.log("Upgrading Dino")
             var dinosaursList = ["stegosaurus.html", "ankylosaurus.html", "pterodactyl.html", "brontosaurus.html" ];
             var dinosaur = dinosaursList[Math.floor(Math.random() * dinosaursList.length)];
-            $(function () {
-                $.get("dinos/" + dinosaur, function (data) {
-                    $(".ascii").html(data);
-                });
+            $.get("dinos/" + dinosaur, function (data) {
+                $(".ascii").html(data);
             });
+        }
+
+        //Events
+        //Startup
+        $(function () {
+            upgradeDino();
+        });
+        //Scheduled
+        var interval = setInterval(function () { upgradeDino(); }, 60 * 1000);
     </script>
 </head>
 <body class="text-center">
