@@ -104,3 +104,22 @@ body {
 .mastfoot {
   color: rgba(255, 255, 255, .5);
 }
+pre{
+  display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0px;
+    text-align: initial;
+}
+pre code.ascii{
+  font-family:monospace;
+  color: white;
+ 
+}
+
+@media (min-width:992px) {
+  pre code.ascii{
+    display:inline-block;
+    margin:0 auto;
+  }  
+}
