@@ -15,26 +15,7 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
-    <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
-    <script type="text/javascript">
-
-        function upgradeDino() {
-            console.log("Upgrading Dino")
-            var dinosaursList = ["stegosaurus.html", "ankylosaurus.html", "pterodactyl.html", "brontosaurus.html" ];
-            var dinosaur = dinosaursList[Math.floor(Math.random() * dinosaursList.length)];
-            $.get("dinos/" + dinosaur, function (data) {
-                $(".ascii").html(data);
-            });
-        }
-
-        //Events
-        //Startup
-        $(function () {
-            upgradeDino();
-        });
-        //Scheduled
-        var interval = setInterval(function () { upgradeDino(); }, 5 * 1000);
-    </script>
+    
 </head>
 <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -53,9 +34,7 @@
             <h1>Mis dinosaurios</h1>
             <p class="lead">La dificultad de ser longevo e innovador</p>
             <pre>
-                <code class="ascii">
-
-                </code>
+                <code class="ascii"></code>
             </pre>
             <p>
                 <a href="https://leanpub.com/misdinosaurios"
@@ -115,6 +94,26 @@
         </footer>
     </div>
     <!-- Google Analytics -->
+    <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function upgradeDino() {
+            var dinosaursList = ["stegosaurus.html", "ankylosaurus.html", "pterodactyl.html", "brontosaurus.html" ];
+            var dinosaur = dinosaursList[Math.floor(Math.random() * dinosaursList.length)];
+            $.get("dinos/" + dinosaur, function (data) {
+                var nameD = dinosaur.substr(0, 3);
+                $(".cover pre").removeClass().addClass(nameD);
+                $(".ascii").html(data);
+            })
+        }
+       // Events
+       // Startup
+        $(function () {
+            upgradeDino();
+        });
+       // Scheduled
+       var interval = setInterval(function () { upgradeDino(); }, 5 * 1000);
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158097939-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
