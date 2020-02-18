@@ -15,6 +15,8 @@ function upgradeDino() {
         "triceratops.html" ];
     var dinosaur = dinosaursList[Math.floor(Math.random() * dinosaursList.length)];
     $.get("dinos/" + dinosaur, function (data) {
+        var nameD = dinosaur.substr(0, 3);
+        $(".cover pre").removeClass().addClass(nameD);
         $(".ascii").html(data);
     });
 }
@@ -25,7 +27,7 @@ $(function () {
     upgradeDino();
 });
 //Scheduled
-var interval = setInterval(function () { upgradeDino(); }, 5 * 1000);
+//var interval = setInterval(function () { upgradeDino(); }, 5 * 1000);
 
 function validateWebForm() {
 
