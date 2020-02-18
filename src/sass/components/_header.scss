@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+header{
+  padding:1rem;
+  position:fixed;
+  background:$std-white;
+  top:0;
+  h1{
+    position:relative;
+    padding:0 0 0 6rem;
+    &::before{
+      content:'';
+      display:block;
+      position: absolute;
+      left:0;
+      width:5rem;
+      height:5rem;
+      @include svg(rescue_logo, left top);
+      background-size:contain;
+
+    }
+  }
+  @media (map-get($rd-types, sm)){
+    position:relative;
+  }
+}
+

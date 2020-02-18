@@ -1,0 +1,31 @@
+
+@mixin clearfix(){
+  &:after{
+	clear: both; content: "."; display: block; height: 0; visibility: hidden;
+  }
+}
+
+
+@mixin disabled(){
+	cursor:default;
+    pointer-events: none;
+    user-select: none;
+    opacity:.2;
+}
+
+@mixin svg($img,$position:0 0,$color:transparent,$repeat: no-repeat) {
+    background: {
+    	color: $color;
+      image: url("../assets/svg/"+$img+".svg"), none;
+      position: $position;
+      repeat: $repeat;
+    }
+}
+
+@mixin clearfix(){
+  &:after{
+    clear: both; content: "."; display: block; height: 0; visibility: hidden;
+  }
+}
+
+

@@ -1,0 +1,92 @@
+@charset "UTF-8";
+.legend {
+  display:block;
+  width:90%;
+  padding:44rem 0 0 0;
+  margin:0 auto;
+
+
+  ul {
+    list-style:none;
+    overflow:hidden;
+    display: flex;
+    flex-wrap: wrap;
+
+    li{
+      list-style:none;
+      cursor: pointer;
+      display:block;
+      overflow:hidden;
+      width:11rem;
+      height:10rem;
+      margin:1rem;
+      border:0.1rem solid $std-blue2;
+
+      &.disabled{
+        @include disabled;
+        &[data-title]:hover::before{
+          display:none;
+        }
+      }
+      &[data-title] {
+        position: relative;
+        cursor: help;
+      }
+
+      &[data-title]:hover::before {
+        content: attr(data-title);
+        position: absolute;
+        top: 0;
+        display:block;
+        padding:0.5rem;
+        line-height:1.5rem;
+        width:91%;
+        height:90%;
+        background:$std-opacity-black;
+        color: #fff;
+        font-size: 1.2rem;
+        word-break: break-word;
+      }
+
+      @for $i from 1 through 18 {
+        &#l#{$i}{
+          @include svg(l#{$i}, center center);
+        }
+      }
+    }
+
+  }
+  @media (map-get($rd-types, sm)){
+
+    padding:0;
+    ul{
+      width: 91%;
+      margin: 0 auto;
+    }
+  }
+  @media (map-get($rd-types, md)){
+    width:40%;
+    &.full{
+      width:90%;
+      margin:0 auto;
+      height:auto;
+      max-height:auto;
+    }
+    ul{
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  @media (map-get($rd-types, lg)){
+    height:auto;
+    max-height:50rem;
+    overflow: hidden;
+    overflow-y:visible;
+    width:44rem;
+  }
+  @media (map-get($rd-types, xl)){
+    max-height:65rem;
+    width: 58rem;
+    margin: 0;
+  }
+}
