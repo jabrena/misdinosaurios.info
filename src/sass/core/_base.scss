@@ -3,34 +3,22 @@ html{
 	-ms-text-size-adjust: 100%;
  	-webkit-text-size-adjust: 100%;
  	-moz-text-size-adjust: 100%;
-	font-size:x-small;
+  //font-size:x-small;
+}
+html,
+body {
+  height: 100%;
+  background-color: $dinoc-02;
+}
+
+body {
+  display: flex;
+  color: $dinoc-01;
 }
 
 
-body{
-
-    font-family: 'Arial';
-    position:relative;
-    overflow-y:visible;
-    padding:0;
-    margin:0;
-}
-
-a, a:hover{
-	text-decoration:none;
-}
-
-
-svg{display:inline-block; cursor:pointer;}
-
-h1{
-  font-size:3.6rem;
-  color:$std-black1;
-}
-h2{
-  font-size:3rem;
-  color:$std-black1;
-  text-align:center;
-  padding:1rem 0;
-  margin:0 0 0 0;
+a,
+a:focus,
+a:hover {
+  color: $dinoc-01;
 }

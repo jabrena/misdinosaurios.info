@@ -1,0 +1,59 @@
+@charset "UTF-8";
+pre{
+    display: block;
+    font-family: monospace;
+    white-space: pre;
+    margin: 1em 0px 25px 0px;
+    text-align: initial;
+}
+pre code.ascii{
+  font-family:monospace;
+  color: $dinoc-01;
+
+}
+
+@media (min-width:992px) {
+
+  pre{
+    height:236px;
+    max-height:236px;
+    overflow: hidden;
+    margin:0 0 25px 0;
+    padding:0;
+  }
+
+  pre.ank{
+    font-size:93%;
+
+  }
+  pre.bro{
+    font-size:66.5%;
+  }
+
+  pre.pte{
+    font-size:71%;
+  }
+
+  pre code.ascii{
+    display:block;
+    width:80%;
+    margin:0 auto;
+    height:236px;
+    max-height:236px;
+    overflow: hidden;
+  }
+
+  pre.ank .ascii{
+    padding:0 34px;
+  }
+
+  pre.bro .ascii{
+    padding:0 34px;
+  }
+  pre.pte .ascii{
+    padding:0 65px;
+  }
+  pre.ste .ascii{
+    padding:0 20px;
+  }
+}

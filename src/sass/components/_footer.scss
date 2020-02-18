@@ -1,19 +1,4 @@
 @charset "UTF-8";
-
-footer{
-  background:$std-blue;
-  position:relative;
-  display:block;
-  width:$hundred;
-  min-height:3rem;
-  height:auto;
-  text-align:center;
-  color:$std-white;
-  font-size:1.6rem;
-  line-height: 3rem;
-  font-weight: 200;
-  @media (map-get($rd-types, md)){
-    position: fixed;
-    bottom:0;
-  }
+ .mastfoot {
+  color: rgba(255, 255, 255, .5);
 }
