@@ -1,0 +1,9 @@
+@charset "UTF-8";
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: $dinoc-02;
+  text-shadow: none; // Prevent inheritance from `body`
+  background-color: $dinoc-01;
+  border: .05rem solid $dinoc-01;
+}

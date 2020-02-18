@@ -1,0 +1,24 @@
+@charset "UTF-8";
+html{
+	-ms-text-size-adjust: 100%;
+ 	-webkit-text-size-adjust: 100%;
+ 	-moz-text-size-adjust: 100%;
+  //font-size:x-small;
+}
+html,
+body {
+  height: 100%;
+  background-color: $dinoc-02;
+}
+
+body {
+  display: flex;
+  color: $dinoc-01;
+}
+
+
+a,
+a:focus,
+a:hover {
+  color: $dinoc-01;
+}

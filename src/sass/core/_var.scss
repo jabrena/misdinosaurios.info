@@ -1,0 +1,28 @@
+
+//Colors
+
+$dinoc-01:#ffffff;
+$dinoc-02:#333;
+
+//Responsive configuration
+
+$mobile: 320px; // Phone portrait minimum
+$mobile-landscape: 480px; // Phone landscape minimum
+$tablet: 768px; // Tablet portrait minimum
+$desktop: 992px; // Laptop+Desktop minimum
+$large-desktop: 1200px; // Large screen minimum
+
+$rd-types:	(
+	xs:'min-width: #{$mobile}',
+	sm:'min-width: #{$mobile-landscape}',
+	md:'min-width: #{$tablet}',
+  lg:'min-width: #{$desktop}',
+  xl:'min-width: #{$large-desktop}'
+)!default; // Responsive configuration
+
+
+
+//Sizes
+
+$hundred: 100%;
+$content-width: 99rem;
